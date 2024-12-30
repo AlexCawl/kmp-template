@@ -1,10 +1,8 @@
 @file:Suppress("UnstableApiUsage")
 
-rootProject.name = extra["project.name"].toString()
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
-    includeBuild("build-logic")
     repositories {
         google {
             mavenContent {
@@ -30,15 +28,17 @@ dependencyResolutionManagement {
         mavenCentral()
     }
     versionCatalogs {
+        create("libs") {
+            from(files("../gradle/libs.versions.toml"))
+        }
         create("libsAndroid") {
-            from(files("gradle/libsAndroid.versions.toml"))
+            from(files("../gradle/libsAndroid.versions.toml"))
         }
         create("libsJvm") {
-            from(files("gradle/libsJvm.versions.toml"))
+            from(files("../gradle/libsJvm.versions.toml"))
         }
     }
 }
 
-include(":composeApp")
-include(":server")
-include(":shared")
+include(":base")
+include(":project")
