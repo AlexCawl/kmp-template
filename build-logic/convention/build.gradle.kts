@@ -3,6 +3,8 @@ plugins {
 }
 
 dependencies {
+    implementation(projects.base)
+
     // Kotlin plugins
     implementation(libs.gradleplugin.kotlinMultiplatform)
     implementation(libs.gradleplugin.composeMultiplatform)

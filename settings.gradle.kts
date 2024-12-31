@@ -1,6 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
-rootProject.name = extra["project.name"].toString()
+rootProject.name = "WeatherWise"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
@@ -29,16 +29,9 @@ dependencyResolutionManagement {
         }
         mavenCentral()
     }
-    versionCatalogs {
-        create("libsAndroid") {
-            from(files("gradle/libsAndroid.versions.toml"))
-        }
-        create("libsJvm") {
-            from(files("gradle/libsJvm.versions.toml"))
-        }
-    }
 }
 
 include(":composeApp")
-include(":server")
+//include(":server")
 include(":shared")
+include(":test")

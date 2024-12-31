@@ -1,5 +1,7 @@
 @file:Suppress("UnstableApiUsage")
 
+import java.net.URI
+
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
@@ -13,6 +15,7 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
 
@@ -27,19 +30,16 @@ dependencyResolutionManagement {
         }
         mavenCentral()
         maven(url = "https://jitpack.io")
+        maven {
+            url = URI("https://androidx.dev/storage/compose-compiler/repository/")
+        }
     }
     versionCatalogs {
         create("libs") {
             from(files("../gradle/libs.versions.toml"))
         }
-        create("libsAndroid") {
-            from(files("../gradle/libsAndroid.versions.toml"))
-        }
-        create("libsJvm") {
-            from(files("../gradle/libsJvm.versions.toml"))
-        }
     }
 }
 
 include(":base")
-include(":project")
+include(":convention")

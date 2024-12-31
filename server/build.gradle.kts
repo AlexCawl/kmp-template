@@ -16,7 +16,7 @@ dependencies {
     implementation(libsJvm.logback)
     implementation(libsJvm.ktor.server.core)
     implementation(libsJvm.ktor.server.netty)
-    testImplementation(libs.junit)
-    testImplementation(libs.kotlin.test)
-    testImplementation(libs.kotlin.test.junit)
+    testImplementation(libsKotlin.junit)
+    testImplementation(libsKotlin.kotlin.test)
+    testImplementation(libsKotlin.kotlin.test.junit)
 }

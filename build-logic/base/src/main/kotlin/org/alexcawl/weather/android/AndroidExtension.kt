@@ -20,6 +20,7 @@ internal typealias AndroidExtensions = CommonExtension<
         out AndroidResources,
         out Installation>
 
+@PublishedApi
 internal val Project.androidExtension: AndroidExtensions
     get() = extensions.findByType(ApplicationExtension::class)
         ?: extensions.findByType(LibraryExtension::class)

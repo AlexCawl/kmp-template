@@ -4,6 +4,7 @@ import org.gradle.api.Project
 import org.gradle.kotlin.dsl.findByType
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 
+@PublishedApi
 internal val Project.kotlinMultiplatformExtension: KotlinMultiplatformExtension
     get() = extensions.findByType<KotlinMultiplatformExtension>()
         ?: error(
