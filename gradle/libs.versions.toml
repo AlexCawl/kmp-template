@@ -33,12 +33,6 @@ common-kotlin-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-
 common-kotlin-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-core", version.ref = "version-common-kotlin-serialization" }
 common-kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "version-common-kotlin-serialization" }
 common-kotlin-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "version-common-kotlin-datetime" }
-common-compose-animation = { group = "androidx.compose.animation", name = "animation", version.ref = "version-common-compose" }
-common-compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "version-common-compose" }
-common-compose-runtime = { group = "androidx.compose.runtime", name = "runtime", version.ref = "version-common-compose" }
-common-compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "version-common-compose" }
-common-compose-resources = { group = "org.jetbrains.compose.components", name = "components-resources", version.ref = "version-common-compose" }
-common-compose-uiTooling = { group = "org.jetbrains.compose.components", name = "components-ui-tooling-preview", version.ref = "version-common-compose" }
 common-ktor-client = { group = "io.ktor", name = "ktor-client", version.ref = "version-common-ktor" }
 common-ktor-serialization = { group = "io.ktor", name = "ktor-client-serialization", version.ref = "version-common-ktor" }
 
@@ -87,14 +81,8 @@ common-source = [
     "common-kotlin-serialization",
     "common-kotlin-serialization-json",
     "common-kotlin-datetime",
-    "common-compose-animation",
-    "common-compose-foundation",
-    "common-compose-runtime",
-    "common-compose-ui",
-    "common-compose-uiTooling",
     "common-ktor-client",
     "common-ktor-serialization",
-    "common-compose-resources",
 ]
 common-test = [
     "common-junit",
