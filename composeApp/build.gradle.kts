@@ -10,6 +10,14 @@ android {
     }
 }
 
+kotlin {
+    sourceSets {
+        commonMain.dependencies {
+            implementation(libs.common.compose.resources)
+        }
+    }
+}
+
 dependencies {
     implementation(project(":shared"))
 }

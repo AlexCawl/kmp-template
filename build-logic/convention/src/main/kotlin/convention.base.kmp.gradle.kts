@@ -22,7 +22,7 @@ kotlinMultiplatformConfiguration {
                 implementation(libs.common.compose.foundation)
                 implementation(libs.common.compose.runtime)
                 implementation(libs.common.compose.ui)
-                implementation(libs.common.compose.resources)
+                runtimeOnly(libs.common.compose.resources)
                 implementation(libs.common.compose.uiTooling)
                 implementation(libs.common.ktor.client)
                 implementation(libs.common.ktor.serialization)

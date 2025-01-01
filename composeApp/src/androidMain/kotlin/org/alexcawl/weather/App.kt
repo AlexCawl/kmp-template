@@ -1,6 +1,7 @@
 package org.alexcawl.weather
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,10 +14,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
-
-//import weatherwise.composeapp.generated.resources.Res
-//import weatherwise.composeapp.generated.resources.compose_multiplatform
+import weatherwise.composeapp.generated.resources.Res
+import weatherwise.composeapp.generated.resources.compose_multiplatform
 
 @Composable
 @Preview
@@ -31,6 +32,7 @@ fun App() {
         AnimatedVisibility(showContent) {
             val greeting = remember { Greeting().greet() }
             Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+                Image(painterResource(Res.drawable.compose_multiplatform), null)
                 BasicText("Compose: $greeting")
             }
         }
