@@ -13,7 +13,7 @@ version-common-junit = "4.13.2"
 
 # ======================================= [versions.android] =======================================
 # [versions.android.source]
-version-android-agp = "8.5.0"
+version-android-agp = "8.2.0"
 version-android-activityCompose = "1.9.3"
 version-android-coreKtx = "1.15.0"
 version-android-espresso = "3.6.1"

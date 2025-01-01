@@ -17,8 +17,7 @@ internal typealias AndroidExtensions = CommonExtension<
         out BuildType,
         out DefaultConfig,
         out ProductFlavor,
-        out AndroidResources,
-        out Installation>
+        out AndroidResources>
 
 @PublishedApi
 internal val Project.androidExtension: AndroidExtensions

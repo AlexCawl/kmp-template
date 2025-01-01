@@ -1,9 +1,12 @@
-import gradle.kotlin.dsl.accessors._d20b9a2835832c504173a50a2fd58d04.compose
 import org.alexcawl.weather.kotlin.kotlinMultiplatformConfiguration
 import org.alexcawl.weather.libs
 import org.jetbrains.compose.ExperimentalComposeLibrary
 
 plugins {
+    id("org.jetbrains.kotlin.multiplatform")
+    id("org.jetbrains.compose")
+    id("org.jetbrains.kotlin.plugin.compose")
+
     id("convention.base.common")
     id("convention.base.android")
     id("convention.base.kmp")
