@@ -81,6 +81,50 @@ gradleplugin-composeCompiler = { module = "org.jetbrains.kotlin:compose-compiler
 gradleplugin-kotlinSerialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "version-common-kotlin" }
 gradleplugin-kotlinJvm = { module = "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin", version.ref = "version-common-kotlin" }
 
+[bundles]
+common-source = [
+    "common-kotlin-coroutines",
+    "common-kotlin-serialization",
+    "common-kotlin-serialization-json",
+    "common-kotlin-datetime",
+    "common-compose-animation",
+    "common-compose-foundation",
+    "common-compose-runtime",
+    "common-compose-ui",
+    "common-compose-uiTooling",
+    "common-ktor-client",
+    "common-ktor-serialization",
+    "common-compose-resources",
+]
+common-test = [
+    "common-junit",
+    "common-kotlin-test",
+    "common-kotlin-test-junit",
+    "common-kotlin-test-coroutines",
+]
+android-source = [
+    "android-kotlin",
+    "android-kotlin-coroutines",
+    "android-activityCompose",
+    "android-splash",
+    "android-lifecycle-runtime",
+    "android-lifecycle-viewmodel",
+    "android-lifecycle-extensions",
+    "android-lifecycle-compose",
+]
+android-test = [
+    "android-junit",
+    "android-testManifest",
+    "android-espresso",
+]
+jvm-source = [
+    "ktor-server-core",
+    "ktor-server-netty",
+    "logback",
+]
+jvm-test = [
+]
+
 [plugins]
 # [plugins.common]
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "version-common-kotlin" }
@@ -94,4 +138,3 @@ androidLibrary = { id = "com.android.library", version.ref = "version-android-ag
 
 # [plugins.jvm]
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "version-common-kotlin" }
-
