@@ -1,10 +1,10 @@
 @file:Suppress("UnstableApiUsage")
 
-rootProject.name = "WeatherWise"
+import java.net.URI
+
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
-    includeBuild("build-logic")
     repositories {
         google {
             mavenContent {
@@ -15,6 +15,7 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
 
@@ -28,9 +29,17 @@ dependencyResolutionManagement {
             }
         }
         mavenCentral()
+        maven(url = "https://jitpack.io")
+        maven {
+            url = URI("https://androidx.dev/storage/compose-compiler/repository/")
+        }
+    }
+    versionCatalogs {
+        create("libs") {
+            from(files("../gradle/libs.versions.toml"))
+        }
     }
 }
 
-include(":composeApp")
-include(":server")
-include(":shared")
+include(":base")
+include(":convention")
