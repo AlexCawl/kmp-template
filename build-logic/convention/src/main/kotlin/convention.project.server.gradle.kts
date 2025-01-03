@@ -3,7 +3,10 @@ import org.alexcawl.weather.libs
 import org.alexcawl.weather.testImplementation
 
 plugins {
+    id("io.gitlab.arturbosch.detekt")
+
     id("convention.base.common")
+    id("convention.base.detekt")
 }
 
 dependencies {

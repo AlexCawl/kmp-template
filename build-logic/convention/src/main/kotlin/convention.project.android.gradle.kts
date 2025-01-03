@@ -7,9 +7,11 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.compose")
     id("org.jetbrains.kotlin.plugin.compose")
+    id("io.gitlab.arturbosch.detekt")
 
     id("convention.base.common")
     id("convention.base.android")
+    id("convention.base.detekt")
 }
 
 dependencies {

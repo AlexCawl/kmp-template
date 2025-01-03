@@ -1,11 +1,11 @@
 [versions]
 # ======================================= [versions.common] ========================================
 # [versions.common.source]
-version-common-kotlin = "2.1.0"
+version-common-kotlin-language = "2.1.0"
 version-common-kotlin-coroutines = "1.9.0"
 version-common-kotlin-serialization = "1.7.3"
 version-common-kotlin-datetime = "0.6.0"
-version-common-compose = "1.7.0"
+version-common-compose = "1.7.3"
 version-common-ktor = "3.0.2"
 
 # [versions.common.test]
@@ -13,7 +13,7 @@ version-common-junit = "4.13.2"
 
 # ======================================= [versions.android] =======================================
 # [versions.android.source]
-version-android-agp = "8.2.0"
+version-android-agp = "8.2.2"
 version-android-activityCompose = "1.9.3"
 version-android-coreKtx = "1.15.0"
 version-android-espresso = "3.6.1"
@@ -25,6 +25,9 @@ version-android-uiTest = "1.7.6"
 # ======================================= [versions.jvm] ===========================================
 # [versions.jvm.source]
 version-jvm-logback = "1.5.12"
+
+# ======================================= [versions.utility] =======================================
+version-utility-detekt = "1.23.7"
 
 [libraries]
 # ======================================= [libraries.common] =======================================
@@ -38,8 +41,8 @@ common-ktor-serialization = { group = "io.ktor", name = "ktor-client-serializati
 
 # [libraries.common.test]
 common-junit = { group = "junit", name = "junit", version.ref = "version-common-junit" }
-common-kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "version-common-kotlin" }
-common-kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "version-common-kotlin" }
+common-kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "version-common-kotlin-language" }
+common-kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "version-common-kotlin-language" }
 common-kotlin-test-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "version-common-kotlin-coroutines" }
 
 # ======================================= [libraries.android] ======================================
@@ -69,11 +72,12 @@ logback = { module = "ch.qos.logback:logback-classic", version.ref = "version-jv
 
 # ======================================= [libraries.precompiled] ==================================
 gradleplugin-android = { module = "com.android.tools.build:gradle", version.ref = "version-android-agp" }
-gradleplugin-kotlinMultiplatform = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "version-common-kotlin" }
+gradleplugin-kotlinMultiplatform = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "version-common-kotlin-language" }
 gradleplugin-composeMultiplatform = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "version-common-compose" }
-gradleplugin-composeCompiler = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "version-common-kotlin" }
-gradleplugin-kotlinSerialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "version-common-kotlin" }
-gradleplugin-kotlinJvm = { module = "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin", version.ref = "version-common-kotlin" }
+gradleplugin-composeCompiler = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "version-common-kotlin-language" }
+gradleplugin-kotlinSerialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "version-common-kotlin-language" }
+gradleplugin-kotlinJvm = { module = "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin", version.ref = "version-common-kotlin-language" }
+gradleplugin-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "version-utility-detekt" }
 
 [bundles]
 common-source = [
@@ -115,14 +119,17 @@ jvm-test = [
 
 [plugins]
 # [plugins.common]
-kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "version-common-kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "version-common-kotlin-language" }
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "version-common-compose" }
-composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "version-common-kotlin" }
-kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "version-common-kotlin" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "version-common-kotlin-language" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "version-common-kotlin-language" }
 
 # [plugins.android]
 androidApplication = { id = "com.android.application", version.ref = "version-android-agp" }
 androidLibrary = { id = "com.android.library", version.ref = "version-android-agp" }
 
 # [plugins.jvm]
-kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "version-common-kotlin" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "version-common-kotlin-language" }
+
+# [plugins.util]
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "version-utility-detekt"}
