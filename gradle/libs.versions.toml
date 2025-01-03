@@ -25,7 +25,10 @@ version-android-uiTest = "1.7.6"
 
 # ======================================= [versions.jvm] ===========================================
 # [versions.jvm.source]
-version-jvm-logback = "1.5.12"
+# ...
+
+# [versions.jvm.test]
+# ...
 
 # ======================================= [versions.utility] =======================================
 version-utility-detekt = "1.23.7"
@@ -65,12 +68,10 @@ android-espresso = { group = "androidx.test.espresso", name = "espresso-core", v
 
 # ======================================= [libraries.jvm] ==========================================
 # [libraries.jvm.source]
-ktor-server-core = { module = "io.ktor:ktor-server-core-jvm", version.ref = "version-common-ktor" }
-ktor-server-netty = { module = "io.ktor:ktor-server-netty-jvm", version.ref = "version-common-ktor" }
-logback = { module = "ch.qos.logback:logback-classic", version.ref = "version-jvm-logback" }
+jvm-kotlin-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "version-common-kotlin-coroutines" }
 
 # [libraries.jvm.test]
-# TODO
+# ...
 
 # ======================================= [libraries.precompiled] ==================================
 gradleplugin-android = { module = "com.android.tools.build:gradle", version.ref = "version-android-agp" }
@@ -113,9 +114,7 @@ android-test = [
     "android-espresso",
 ]
 jvm-source = [
-    "ktor-server-core",
-    "ktor-server-netty",
-    "logback",
+    "jvm-kotlin-coroutines"
 ]
 jvm-test = [
 ]
