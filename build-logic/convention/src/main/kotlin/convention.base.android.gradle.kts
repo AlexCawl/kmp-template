@@ -1,18 +1,18 @@
 @file:Suppress("UnstableApiUsage")
 
 import com.android.build.api.dsl.ManagedVirtualDevice
-import org.alexcawl.weather.android.androidApplicationConfiguration
-import org.alexcawl.weather.android.androidBaseConfiguration
-import org.alexcawl.weather.android.androidLibraryConfiguration
-import org.alexcawl.weather.buildToolsVersionValue
-import org.alexcawl.weather.compileSdkValue
-import org.alexcawl.weather.javaCompileTargetVersionValue
-import org.alexcawl.weather.minSdkValue
-import org.alexcawl.weather.ndkVersionValue
-import org.alexcawl.weather.projectVersionCodeValue
-import org.alexcawl.weather.projectVersionNameValue
-import org.alexcawl.weather.targetSdkValue
-import org.alexcawl.weather.toJavaVersion
+import org.alexcawl.plugins.android.androidApplicationConfiguration
+import org.alexcawl.plugins.android.androidBaseConfiguration
+import org.alexcawl.plugins.android.androidLibraryConfiguration
+import org.alexcawl.plugins.buildToolsVersionValue
+import org.alexcawl.plugins.compileSdkValue
+import org.alexcawl.plugins.javaCompileTargetVersionValue
+import org.alexcawl.plugins.minSdkValue
+import org.alexcawl.plugins.ndkVersionValue
+import org.alexcawl.plugins.projectVersionCodeValue
+import org.alexcawl.plugins.projectVersionNameValue
+import org.alexcawl.plugins.targetSdkValue
+import org.alexcawl.plugins.toJavaVersion
 import org.gradle.kotlin.dsl.maybeCreate
 
 androidBaseConfiguration {

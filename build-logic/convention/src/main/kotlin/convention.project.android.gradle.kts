@@ -1,7 +1,7 @@
-import org.alexcawl.weather.androidTestImplementation
-import org.alexcawl.weather.implementation
-import org.alexcawl.weather.libs
-import org.alexcawl.weather.testImplementation
+import org.alexcawl.plugins.androidTestImplementation
+import org.alexcawl.plugins.implementation
+import org.alexcawl.plugins.libs
+import org.alexcawl.plugins.testImplementation
 
 plugins {
     id("org.jetbrains.kotlin.android")
