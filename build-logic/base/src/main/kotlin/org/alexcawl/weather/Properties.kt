@@ -34,8 +34,14 @@ val Project.kotlinJvmToolchainVersionValue: String
         ?: error("Field \"jvmToolchainVersion\" not found in gradle.properties")
 
 val Project.kotlinLanguageVersionValue: String
-    get() = properties["kotlinLanguageVersion"]?.toString()
-        ?: error("Field \"kotlinLanguageVersion\" not found in gradle.properties")
+    get() = libs.versions.version.common.kotlin.language.orNull
+        ?: error("Field \"version-common-kotlin\" not found in libs.versions.toml")
+
+// Detekt properties
+val Project.detektVersionValue: String
+    get() = libs.versions.version.utility.detekt.orNull
+        ?: error("Field \"version-utility-detekt\" not found in libs.versions.toml")
+
 
 // Versioning properties
 val Project.majorValue: Int
