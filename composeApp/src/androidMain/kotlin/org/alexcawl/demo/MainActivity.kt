@@ -1,4 +1,4 @@
-package org.alexcawl.weather
+package org.alexcawl.demo
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

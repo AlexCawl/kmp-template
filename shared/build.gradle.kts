@@ -3,5 +3,5 @@ plugins {
 }
 
 android {
-    namespace = "org.alexcawl.weather.shared"
+    namespace = "org.alexcawl.demo.shared"
 }

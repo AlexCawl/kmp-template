@@ -1,4 +1,4 @@
-package org.alexcawl.weather
+package org.alexcawl.demo
 
 interface Platform {
     val name: String

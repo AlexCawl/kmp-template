@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "org.alexcawl.weather"
+    namespace = "org.alexcawl.demo"
 
     defaultConfig {
-        applicationId = "org.alexcawl.weather"
+        applicationId = "org.alexcawl.demo"
     }
 }
 
 dependencies {
-    implementation(project(":shared"))
+    implementation(projects.shared)
 }

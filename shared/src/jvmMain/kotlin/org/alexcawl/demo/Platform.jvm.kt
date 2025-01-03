@@ -1,4 +1,4 @@
-package org.alexcawl.weather
+package org.alexcawl.demo
 
 class JVMPlatform: Platform {
     override val name: String = "Java ${System.getProperty("java.version")}"

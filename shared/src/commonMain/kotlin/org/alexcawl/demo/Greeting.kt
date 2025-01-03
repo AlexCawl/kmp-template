@@ -1,4 +1,4 @@
-package org.alexcawl.weather
+package org.alexcawl.demo
 
 class Greeting {
     private val platform = getPlatform()
