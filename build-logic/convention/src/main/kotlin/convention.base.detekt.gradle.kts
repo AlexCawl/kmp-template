@@ -1,9 +1,9 @@
 import io.gitlab.arturbosch.detekt.Detekt
 import io.gitlab.arturbosch.detekt.report.ReportMergeTask
-import org.alexcawl.weather.detekt.DetektConfiguration
-import org.alexcawl.weather.detekt.detektConfiguration
-import org.alexcawl.weather.detektVersionValue
-import org.alexcawl.weather.javaCompileTargetVersionValue
+import org.alexcawl.plugins.detekt.DetektConfiguration
+import org.alexcawl.plugins.detekt.detektConfiguration
+import org.alexcawl.plugins.detektVersionValue
+import org.alexcawl.plugins.javaCompileTargetVersionValue
 
 plugins {
 
