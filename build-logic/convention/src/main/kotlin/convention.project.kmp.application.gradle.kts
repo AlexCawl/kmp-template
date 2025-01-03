@@ -1,4 +1,4 @@
-import org.alexcawl.weather.kotlin.kotlinMultiplatformConfiguration
+import org.alexcawl.plugins.kotlin.kotlinMultiplatformConfiguration
 
 plugins {
     id("com.android.application")

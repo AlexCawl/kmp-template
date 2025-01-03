@@ -1,7 +1,0 @@
-package org.alexcawl.demo
-
-class Greeting {
-    private val platform = getPlatform()
-
-    fun greet(): String = "Hello, ${platform.name}!"
-}
